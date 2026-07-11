@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Historia | Club Atlético Plaza Huincul</title>
+    <link rel="stylesheet" href="./css/estilosHeader.css">
+    <link rel="stylesheet" href="./css/estiloFooter.css">
+    <link rel="stylesheet" href="./css/estilosHistoria.css"> 
+    <script src="./js/funcionalidad.js"></script>
+</head>
+
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => {document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    
+    <header class="banner">
+        <h1>Nuestra Historia</h1>
+    </header>
+
+    <main>
+        <section class="historia-club">
+            
+            <p class="introduccion"><strong>
+                El Club Atlético Plaza Huincul, fundado el 25 de Mayo de 1920, es una de las instituciones deportivas y sociales más antiguas y respetadas de la región de Plaza Huincul. Más de un siglo de pasión, esfuerzo y compromiso con la comunidad.
+                </strong>
+            </p>
+
+            <div class="timeline">
+                
+                <article class="evento">
+                    <div class="fecha">25 de Mayo de 1920</div>
+                    <div class="contenido">
+                        <h3>Fundación y Colores Oficiales</h3>
+                        <p>Bajo la denominación de "ASOCIACIÓN CIVIL CLUB ATLÉTICO PLAZA HUINCUL", un grupo de visionarios establece la fundación del club. Se definen los colores oficiales de la Institución: **el azul y el blanco**.</p>
+                        <img src="./Imagenes/antigua sede2.jpeg" alt="Antigua fotografía del acta de fundación o primeros miembros">
+                    </div>
+                </article>
+
+                <article class="evento right">
+                    <div class="fecha">Década de 1950</div>
+                    <div class="contenido">
+                        <h3>Consolidación de Disciplinas</h3>
+                        <p>El club consolida su rol en la comunidad, fomentando la educación física y la práctica de Fútbol, Básquetbol, Voleibol y otros deportes. Se convierte en un punto de encuentro social y cultural clave en la ciudad de Plaza Huincul.</p>
+                        <img src="./Imagenes/equipo futbol 1952.jpg" alt="Equipo de futbol antiguo del club">
+                    </div>
+                </article>
+
+                <article class="evento">
+                    <div class="fecha">Año 1956</div>
+                    <div class="contenido">
+                        <h3>Clausura de la vieja sede del CAPH</h3>
+                        <p>El año 1956 marcó el cierre de una etapa de itinerancia para el Club Atlético Plaza Huincul. Tras décadas de funcionar en instalaciones temporales y espacios cedidos por YPF, la institución "cerró" simbólicamente su pasado nómade para inaugurar su imponente sede social actual en calle Atahualpa Yupanqui del Barrio Central.</p>
+                        <img src="./Imagenes/acto vieja sede 1956.jpg" alt="Antigua fotografía de clausura de la vieja sede">
+                    </div>
+                </article>
+
+                <article class="evento right">
+                    <div class="fecha">Año 1956</div>
+                    <div class="contenido">
+                        <h3>Inauguración de la nueva sede del CAPH</h3>
+                        <p>La inauguración de la nueva sede social del Club Atlético Plaza Huincul en 1956 representó un momento de esplendor para la institución, consolidándose como el principal centro de reunión social y deportiva de la época en el campamento de YPF. 
+                        En aquel entonces, la sede se convirtió en el corazón de la vida social, albergando grandes bailes, eventos culturales y encuentros deportivos que marcaron a generaciones de vecinos.</p>
+                        <img src="./Imagenes/Inauguración nueva sede.jpeg" alt="Antigua fotografía del acta de fundación de la nueva sede">
+                    </div>
+                </article>
+
+                <article class="evento right">
+                    <div class="fecha">Década de 1950</div>
+                    <div class="contenido">
+                        <h3>Consolidación de Disciplinas</h3>
+                        <p>El club consolida su rol en la comunidad, fomentando la educación física y la práctica de Fútbol, Básquetbol, Voleibol y otros deportes. Se convierte en un punto de encuentro social y cultural clave en la ciudad de Plaza Huincul.</p>
+                        <img src="./Imagenes/historia-equipo-antiguo.jpg" alt="Equipo de basquetbol antiguo del club">
+                    </div>
+                </article>
+
+                <article class="evento">
+                    <div class="fecha">Actualidad</div>
+                    <div class="contenido">
+                        <h3>Un Legado Vivo</h3>
+                        <p>Hoy, el CAPH continúa su legado con las mismas bases: fomentar el deporte, el bien común y la solidaridad entre sus asociados. La institución sigue creciendo, adaptándose a las nuevas generaciones y manteniendo vivo el espíritu fundacional.</p>
+                        <img src="./Imagenes/Frente club2.jpg" alt="Imagen moderna de las instalaciones del club">
+                    </div>
+                </article>
+                
+            </div>
+            
+        </section>
+    </main>
+    
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

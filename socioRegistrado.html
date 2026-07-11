@@ -1,0 +1,40 @@
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAPH - Club Atlético Plaza Huincul</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+        <link rel="stylesheet" href="./css/estilosHeader.css">
+        <link rel="stylesheet" href="./css/estilosSocios.css">
+        <link rel="stylesheet" href="./css/estiloFooter.css">
+        <script defer src="./js/validarIngreso.js"></script>
+    </head>
+    <body onload="anioActual()">
+        <div id="header"></div>
+        <script>
+            fetch('encabezado.html').then(response => response.text())
+            .then(data => {document.getElementById('header').innerHTML = data;
+            });
+        </script>
+        <main class="contenido">
+            <section class="ingreso-portal">
+                <div id="ingreso-socios">
+                    <h1>Gracias por registrarte en nuestro Portal de Socios</h1>
+                    <br/>
+                    <h3>Solo falta un paso, ingresar a tu correo y validar la cuenta.</h3>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <a href="#" class="escudo">
+                    <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+                </a>
+                <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                    Sitio Web Oficial. <br/>
+                    Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto | Club Atlético Plaza Huincul</title>
+  <link rel="stylesheet" href="./css/estilosHeader.css">
+  <link rel="stylesheet" href="./css/estilosEstatuto.css">
+  <link rel="stylesheet" href="./css/estiloFooter.css">
+  <script src="./js/funcionalidad.js"></script>
+</head>
+
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => {document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    <header class="banner">
+        <h1>Estatuto</h1>
+    </header>
+
+    <main>
+        <section class="estatuto">
+            <h2>Descargar Estatuto como documento PDF:</h2>
+            <a href="./ESTATUTO SOCIAL.pdf"><img src="./Imagenes/descarga_documento3.jpg" alt="descarga archivo"/>Descargar Estatuto Social (PDF)
+            </a>
+        </section>
+    </main>
+    
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

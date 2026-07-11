@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Deportes | Club Atlético Plaza Huincul</title>
+    <link rel="stylesheet" href="./css/estilosHeader.css">
+    <link rel="stylesheet" href="./css/estiloFooter.css">
+    <link rel="stylesheet" href="./css/estilosInfoSocios.css"> 
+    <script src="./js/funcionalidad.js"></script>
+</head>
+
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => {document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    
+    <header class="banner">
+        <h1>Información para Socios</h1>
+    </header>
+
+    <main>
+        <section id="info-socios" class="container">
+            
+            <div class="socios-wrapper">
+                <div class="socios-beneficios">
+                    <h3>¿Por qué ser parte del Club?</h3>
+                    <ul class="beneficios-list">
+                        <li><i class="fas fa-check-circle"></i> Acceso libre a las instalaciones del club.</li>
+                        <li><i class="fas fa-check-circle"></i> Descuentos exclusivos en cuotas de todas las disciplinas.</li>
+                        <li><i class="fas fa-check-circle"></i> Prioridad en la reserva de canchas y quinchos.</li>
+                        <li><i class="fas fa-check-circle"></i> Participación activa en las asambleas del club.</li>
+                    </ul>
+                </div>
+
+                <div class="socios-tramites">
+                    <h3>Cómo asociarte</h3>
+                    <div class="paso-item">
+                        <span class="paso-numero">1</span>
+                        <p>Presentar fotocopia de DNI (Frente y Dorso).</p>
+                    </div>
+                    <div class="paso-item">
+                        <span class="paso-numero">2</span>
+                        <p>Dos fotos carnet 4x4 (pueden ser digitales).</p>
+                    </div>
+                    <div class="paso-item">
+                        <span class="paso-numero">3</span>
+                        <p>Completar la ficha de inscripción en secretaría.</p>
+                    </div>
+                    <a href="fichas/inscripcion-plaza.pdf" class="btn-download" target="_blank">
+                        Descargar Ficha de Inscripción
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

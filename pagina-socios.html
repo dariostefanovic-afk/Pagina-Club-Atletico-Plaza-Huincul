@@ -1,0 +1,60 @@
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal de Socios - CAPH</title>
+  <link rel="stylesheet" href="./css/estilosPortal.css">
+  <link rel="stylesheet" href="./css/estiloFooter.css">
+  <script src="./js/portal.js"></script>
+  <script src="./js/funcionalidad.js"></script>
+</head>
+<body onload="anioActual()">
+  <header>
+    <h1>Bienvenida/o, <span id="nombreSocio"></span></h1>
+  </header>
+
+  <main class="portal">
+    <section class="perfil">
+      <h2>Mi Perfil</h2>
+      <p>Número de documento: <span id="nroDocSocio"></span></p>
+      <button onclick="cerrarSesion()">Cerrar sesión</button>
+    </section>
+
+    <section class="asociacion">
+      <h2>Opciones de Asociación</h2>
+      <select id="planCuota">
+        <option value="10000">Plan Básico - $10000</option>
+        <option value="25000">Plan Familiar - $25000</option>
+        <option value="30000">Plan Premium - $30000</option>
+      </select>
+      <button onclick="guardarPlan()">Guardar Plan</button>
+      <p id="planGuardado"></p>
+    </section>
+
+    <section class="actividades">
+      <h2>Mis Actividades</h2>
+      <label><input type="checkbox" value="Fútbol"> Fútbol</label><br>
+      <label><input type="checkbox" value="Natación"> Natación</label><br>
+      <label><input type="checkbox" value="Basquet"> Basquet</label><br>
+      <label><input type="checkbox" value="Yoga"> Yoga</label><br><br>
+      <button onclick="guardarActividades()">Guardar Actividades</button>
+      <ul id="listaActividades"></ul>
+    </section>
+
+    <section class="bajaSocio">
+      <h2>Darme de baja como socio</h2>
+      <button onclick="darDeBaja()">Dar de baja mi cuenta</button>
+    </section>
+  </main>
+  <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+  </footer>
+</body>
+</html>

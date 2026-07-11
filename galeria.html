@@ -1,0 +1,58 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería | Club Atlético Plaza Huincul</title>
+  <link rel="stylesheet" href="./css/estilosHeader.css">
+  <link rel="stylesheet" href="./css/estilosGaleria.css">
+  <link rel="stylesheet" href="./css/estiloFooter.css">
+  <script defer src="./js/funcionalidad.js"></script>
+  <script defer src="./js/galeria.js"></script>
+</head>
+<body onload="anioActual()">
+    <div id="header"></div>
+        <script>
+            fetch('encabezado.html').then(response => response.text())
+            .then(data => {document.getElementById('header').innerHTML = data;
+            });
+        </script>
+
+    <header class="banner">
+        <h1>Galería del Club</h1>
+    </header>
+
+    <main class="galeria">
+        <section class="grid-fotos">
+        <figure><img src="./Imagenes/basquet2.jpg" alt="Cancha de básquet" onclick="abrirLightbox(this)">
+            <figcaption>Cancha de Básquet</figcaption></figure>
+        <figure><img src="./Imagenes/cancha futbol2.jpg" alt="Campo de fútbol 11" onclick="abrirLightbox(this)">
+            <figcaption>Fútbol 11</figcaption></figure>
+        <figure><img src="./Imagenes/padel fem.jpg" alt="Canchas de pádel" onclick="abrirLightbox(this)">
+            <figcaption>Pádel</figcaption></figure>
+        <figure><img src="./Imagenes/pileta2.jpg" alt="Pileta climatizada" onclick="abrirLightbox(this)">
+            <figcaption>Pileta</figcaption></figure>
+        <figure><img src="./Imagenes/salon de fiestas.jpg" alt="Salón de eventos" onclick="abrirLightbox(this)">
+            <figcaption>Salon de Eventos</figcaption></figure>
+        <figure><img src="./Imagenes/salon 105 años2.jpg" alt="Salón 105 años" onclick="abrirLightbox(this)">
+            <figcaption>Festejo de los 105 años del CAPH</figcaption></figure>
+        <figure><img src="./Imagenes/quincho.jpg" alt="Quincho del club" onclick="abrirLightbox(this)">
+            <figcaption>Quincho</figcaption></figure>
+        <figure><img src="./Imagenes/ring box.jpg" alt="Ring de boxeo" onclick="abrirLightbox(this)">
+            <figcaption>Boxeo</figcaption></figure>
+        </section>
+    </main>
+    <div id="lightbox" class="lightbox" onclick="cerrarLightbox()">
+    <img id="imagenAmpliada" src="">
+    </div>
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

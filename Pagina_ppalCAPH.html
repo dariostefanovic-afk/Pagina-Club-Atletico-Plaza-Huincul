@@ -1,0 +1,100 @@
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAPH - Club Atlético Plaza Huincul</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+        <link rel="stylesheet" href="./css/estilosHeader.css">
+        <link rel="stylesheet" href="./css/estiloFooter.css">
+        <script defer src="./js/funcionalidad.js"></script>
+    </head>
+    <body onload="anioActual()">
+        <div id="header"></div>
+        <script>
+            fetch('encabezado.html').then(response => {
+                if (!response.ok) throw new Error("Error al cargar encabezado");
+                return response.text();
+            }).then(data => {document.getElementById('header').innerHTML = data;
+            }).catch(error => {console.error("Encabezado no disponible:", error);
+            });
+        </script>
+        <main class="contenido">
+            <section class="bienvenida">
+                <div id="bienvenidos">
+                    <h1>Bienvenidos al Club Atlético Plaza Huincul</h1>
+                    <h2>Conocé nuestras actividades, deportes y servicios para toda la comunidad.</h2>
+                </div>
+                <br/>
+                <br/>
+            </section>
+            <section class="noticias">
+                <img src=""/>
+                <br/>
+                <h2>Últimas noticias</h2>
+                <div class="contiene-noticias">
+                    <div class="noticia">
+                        <table>
+                            <td>
+                                <img src="./Imagenes/clinica Herman2.jpg"/>
+                            </td>
+                            <td class="txt-noticia">
+                                <h3>Clínica de Basquet para juveniles</h3>
+                                <p>El Ex-Campeón Olímpico con la Selección Nacional de Basquet Walter Hermann, dicta una clínica para categorías menores en el Club!</p>
+                                <span class="fecha">08/07/2025</span>
+                            </td>
+                        </table>
+                    </div>
+                    <div class="noticia">
+                        <table>
+                            <td>
+                                <img src="./Imagenes/equipo infantil2.jpg"/>
+                            </td>
+                            <td class="txt-noticia">
+                                <h3>Nuevo torneo de fútbol infantil</h3>
+                                <p>El CAPH organiza un torneo regional para categorías menores. ¡Inscribite hasta el 15 de julio!</p>
+                                <span class="fecha">04/07/2025</span>
+                            </td>
+                        </table>
+                    </div>
+                    <div class="noticia">
+                        <table>
+                            <td>
+                                <img src="./Imagenes/Frente club.jpg"/>
+                            </td>
+                            <td class="txt-noticia">
+                                <h3>Obras en el gimnasio principal</h3>
+                                <p>Comenzaron las reformas para ampliar el espacio de entrenamiento. Finalización estimada: septiembre.</p>
+                                <span class="fecha">02/07/2025</span>
+                            </td>
+                        </table>                        
+                    </div>
+                    <div class="noticia oculto">
+                        <table>
+                            <td>
+                                <img src="./Imagenes/yoga-19.jpg"/>
+                            </td>
+                            <td class="txt-noticia">
+                                <h3>Clases de yoga abiertas a la comunidad</h3>
+                                <p>Todos los martes y jueves a las 18:00 hs. Actividad gratuita para socios y vecinos.</p>
+                                <span class="fecha">30/06/2025</span>
+                            </td>
+                        </table>                        
+                    </div>
+                </div>
+                <button id="verMasBtn">Ver más noticias</button>
+                <p></p>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <a href="#" class="escudo">
+                    <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+                </a>
+                <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                    Sitio Web Oficial. <br/>
+                    Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>

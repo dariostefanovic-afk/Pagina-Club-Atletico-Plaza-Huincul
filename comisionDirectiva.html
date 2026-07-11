@@ -1,0 +1,59 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto | Club Atlético Plaza Huincul</title>
+  <link rel="stylesheet" href="./css/estilosHeader.css">
+  <link rel="stylesheet" href="./css/estilosComision.css">
+  <link rel="stylesheet" href="./css/estiloFooter.css">
+  <script src="./js/funcionalidad.js"></script>
+</head>
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => {document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    <header class="banner">
+        <h1>Comisión Directiva</h1>
+    </header>
+
+    <main>
+        <section class="comision">
+            <h2>La Comisión Directiva del CAPH está compuesta por:</h2>
+            <ul class="lista-comision">
+                <li><strong>Comisión Directiva</strong>
+                    <ul>
+                        <li><strong>Presidente:</strong> Stefanovic, Miguel Ángel</li>
+                        <li><strong>Secretario:</strong> Díaz, Cesar Fernando</li>
+                        <li><strong>Tesorero:</strong> Ramírez, Graciela del Carmen</li>
+                        <li><strong>Primer Vocal Titular:</strong> Rivas, Juan Carlos</li>
+                        <li><strong>Segundo Vocal Titular:</strong> Videla, Valdemar Rodrigo</li>
+                        <li><strong>Primer Vocal Suplente:</strong> Becerra, Gustavo Daniel</li>
+                        <li><strong>Segundo Vocal Suplente:</strong> Benegas, Gustavo Eduardo</li>
+                    </ul>
+                </li>
+                <li><strong>Comisión Revisora de Cuentas</strong>
+                    <ul>
+                        <li><strong>Primer Revisor de cuentas:</strong> Medel, Juan Domingo</li>
+                        <li><strong>Segundo Revisor de cuentas:</strong> Garcilazo, Abelardo Jose</li>
+                        <li><strong>Tercer Revisor de cuentas:</strong> Bordon, Orlando</li>
+                        <li><strong>Revisor Suplente de cuentas:</strong> Sabatini, Miguel Angel</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

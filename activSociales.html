@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Deportes | Club Atlético Plaza Huincul</title>
+    <link rel="stylesheet" href="./css/estilosHeader.css">
+    <link rel="stylesheet" href="./css/estiloFooter.css">
+    <link rel="stylesheet" href="./css/estilosActivSoc.css"> 
+    <script src="./js/funcionalidad.js"></script>
+</head>
+
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => {document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    
+    <header class="banner">
+        <h1>Actividades Sociales y Recreativas</h1>
+    </header>
+
+    <main>
+        <section id="sociales-recreativas" class="container">
+            <div class="sociales-header">
+                <h2 class="section-title">Vida Social y Recreación</h2>
+                <p class="section-intro">Más que un club, somos el punto de encuentro de nuestra comunidad en Plaza Huincul.</p>
+            </div>
+
+            <div class="sociales-grid">
+                <div class="social-card">
+                    <div class="social-badge">Social</div>
+                    <div class="social-img" style="background-image: url('salon-social.jpg');"></div>
+                    <div class="social-info">
+                        <h3>Salón de Usos Múltiples</h3>
+                        <p>Espacio disponible para eventos familiares, peñas y reuniones institucionales con capacidad para 100 personas.</p>
+                        <span class="tag-status">Disponible para Alquiler</span>
+                    </div>
+                </div>
+
+                <div class="social-card">
+                    <div class="social-badge">Cultura</div>
+                    <div class="social-img" style="background-image: url('talleres.jpg');"></div>
+                    <div class="social-info">
+                        <h3>Talleres y Cursos</h3>
+                        <p>Clases de folklore, yoga y manualidades para todas las edades. Un espacio para aprender y compartir.</p>
+                        <a href="#" class="btn-info-social">Consultar Horarios</a>
+                    </div>
+                </div>
+
+                <div class="social-card">
+                    <div class="social-badge">Recreativo</div>
+                    <div class="social-img" style="background-image: url('quincho.jpg');"></div>
+                    <div class="social-info">
+                        <h3>Sector de Parrillas</h3>
+                        <p>Disfrutá de un asado en familia. El club cuenta con quinchos equipados para el uso exclusivo de los socios.</p>
+                        <span class="tag-status">Reserva previa necesaria</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

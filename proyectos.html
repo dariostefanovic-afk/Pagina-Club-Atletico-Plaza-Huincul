@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyectos Futuros | CAPH</title>
+    <link rel="stylesheet" href="./css/estilosHeader.css">
+    <link rel="stylesheet" href="./css/estiloFooter.css">
+    <link rel="stylesheet" href="./css/estilosProyectos.css"> 
+    <script src="./js/funcionalidad.js"></script>
+</head>
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => { document.getElementById('header').innerHTML = data; });
+    </script>
+
+    <header class="banner">
+        <h1>Proyectos y Visión 2030</h1>
+    </header>
+
+    <main>
+        <section class="contenedor-proyectos">
+            <p class="intro-proyectos">
+                Miramos hacia el futuro con la misma pasión que nuestros fundadores. Estos son los proyectos de ampliación y modernización que transformarán nuestra casa.
+            </p>
+
+            <div class="lista-proyectos">
+                <article class="tarjeta-proyecto">
+                    <div class="visual-proyecto">
+                        <img src="./Imagenes/proyecto-albergue.jpg" alt="Render Albergue Deportivo">
+                        <div class="badge-etapa">En Diseño</div>
+                    </div>
+                    <div class="cuerpo-proyecto">
+                        <h3>Albergue Deportivo "Plaza"</h3>
+                        <p>Construcción de un albergue con capacidad para 40 deportistas, destinado a delegaciones que visiten nuestra ciudad para competencias regionales.</p>
+                        <ul class="detalles-tecnicos">
+                            <li><strong>Superficie:</strong> 250 m²</li>
+                            <li><strong>Ubicación:</strong> Sector Norte del predio</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="tarjeta-proyecto">
+                    <div class="visual-proyecto">
+                        <img src="./Imagenes/proyecto-iluminacion.jpg" alt="Proyecto Iluminación Solar">
+                        <div class="badge-etapa">Búsqueda de Fondos</div>
+                    </div>
+                    <div class="cuerpo-proyecto">
+                        <h3>Energía Sustentable</h3>
+                        <p>Instalación de paneles solares para el autoabastecimiento del gimnasio y luminarias LED inteligentes en todo el predio exterior.</p>
+                        <ul class="detalles-tecnicos">
+                            <li><strong>Impacto:</strong> 40% ahorro energético</li>
+                            <li><strong>Tecnología:</strong> Paneles Monocristalinos</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="tarjeta-proyecto">
+                    <div class="visual-proyecto">
+                        <img src="./Imagenes/proyecto-pileta.jpg" alt="Ampliación Buffet">
+                        <div class="badge-etapa">Licitación</div>
+                    </div>
+                    <div class="cuerpo-proyecto">
+                        <h3>Remodelación Sector Social</h3>
+                        <p>Ampliación del buffet principal y creación de una nueva terraza al aire libre para el disfrute de las familias durante los fines de semana.</p>
+                        <ul class="detalles-tecnicos">
+                            <li><strong>Capacidad:</strong> +100 personas</li>
+                            <li><strong>Plazo:</strong> 6 meses de ejecución</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="contacto-proyectos-cta">
+            <div class="contenido-cta">
+                <h2>¿Querés ser parte del crecimiento del Club?</h2>
+                <p>Si sos una empresa, un socio o un vecino interesado en colaborar con estos proyectos o realizar un aporte para las futuras obras, queremos escucharte.</p>
+                
+                <a href="contacto.html" class="btn-contacto-obra">
+                    <img src="./Imagenes/icono_mensaje.jpg" alt="Mensaje" class="icono-btn">
+                    Contactar por Proyectos
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

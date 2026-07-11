@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Deportes | Club Atlético Plaza Huincul</title>
+    <link rel="stylesheet" href="./css/estilosHeader.css">
+    <link rel="stylesheet" href="./css/estiloFooter.css">
+    <link rel="stylesheet" href="./css/estilosEventosDepor.css"> 
+    <script src="./js/funcionalidad.js"></script>
+</head>
+
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => {document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    
+    <header class="banner">
+        <h1>Actividades Deportivas</h1>
+    </header>
+
+    <main>
+        <section id="eventos-deportivos" class="container">
+            <div class="eventos-header">
+                <h2 class="section-title">Próximos Encuentros y Torneos</h2>
+                <p>Alentá a "Plaza" en cada competencia. ¡Tu presencia en la tribuna suma!</p>
+            </div>
+
+            <div class="eventos-lista">
+                <div class="evento-item">
+                    <div class="evento-fecha">
+                        <span class="dia">15</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                    <div class="evento-detalle">
+                        <span class="categoria-tag">Fútbol - Primera</span>
+                        <h3>Clásico de la Comarca</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Estadio General San Martín, Plaza Huincul</p>
+                        <p><i class="fas fa-clock"></i> 16:00 hs</p>
+                    </div>
+                    <div class="evento-accion">
+                        <a href="#" class="btn-entrada">Ver Entradas</a>
+                    </div>
+                </div>
+
+                <div class="evento-item">
+                    <div class="evento-fecha">
+                        <span class="dia">22</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                    <div class="evento-detalle">
+                        <span class="categoria-tag basquet">Básquet - U17</span>
+                        <h3>Torneo Integración</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Gimnasio Cubierto del Club</p>
+                        <p><i class="fas fa-clock"></i> 19:30 hs</p>
+                    </div>
+                    <div class="evento-accion">
+                        <span class="estado-evento">Entrada Libre</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

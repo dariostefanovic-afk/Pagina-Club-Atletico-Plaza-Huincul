@@ -1,0 +1,66 @@
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAPH - Club Atlético Plaza Huincul</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+        <link rel="stylesheet" href="./css/estilosHeader.css">
+        <link rel="stylesheet" href="./css/estilosSocios.css">
+        <link rel="stylesheet" href="./css/estiloFooter.css">
+        <script defer src="./js/validarIngreso.js"></script>
+    </head>
+    <body onload="anioActual()">
+        <div id="header"></div>
+        <script>
+            fetch('encabezado.html').then(response => response.text())
+            .then(data => {document.getElementById('header').innerHTML = data;
+            });
+        </script>
+        <main class="contenido">
+            <section class="ingreso-portal">
+                <div id="ingreso-socios">
+                    <h1>Acceso al Portal de socios del</h1>
+                    <h1>Club Atlético Plaza Huincul</h1>
+                    <br/>
+                    <h2>Ingreso de socios</h2>
+                </div>
+            </section>
+            <section class="form-ingreso">
+                <form id="formIngreso">
+                    <label for="tipoDoc">Tipo de documento:</label>
+                    <select id="tipo_doc" name="tipo_doc">
+                    <option value="tipo1">DNI</option>
+                    <option value="tipo2">PASAPORTE</option>
+                    <option value="tipo3">LE</option>
+                    <option value="tipo4">LC</option>
+                    <option value="tipo5">CI</option>
+                    <option value="tipo6">OTRO</option>
+                    </select>
+
+                    <label for="nroDoc">Numero de documento:</label>
+                    <input type="text" id="nro_doc" name="nro_doc" >
+
+                    <label for="contrasenia">Contraseña:</label>
+                    <input type="password" id="clave" name="clave" >
+
+                    <input type="button" value="Ingresar" onclick="validarIngreso();">
+                </form>
+                <div id="botones">
+                    <input type="button" value="Recuperar Contraseña" onclick="recuperaClave()">
+                    <input type="button" value="Regristate" onclick="window.location.href='registroSocio.html'">
+                </div>       
+            </section>
+        </main>
+        <footer>
+            <div>
+                <a href="#" class="escudo">
+                    <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+                </a>
+                <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                    Sitio Web Oficial. <br/>
+                    Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>

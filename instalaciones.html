@@ -1,0 +1,137 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Instalaciones | Club Atlético Plaza Huincul</title>
+  <link rel="stylesheet" href="./css/estilosHeader.css">
+  <link rel="stylesheet" href="./css/estilosInsta.css">
+  <link rel="stylesheet" href="./css/estiloFooter.css">
+  <script defer src="./js/funcionalidad.js"></script>
+</head>
+
+<body onload="anioActual()">
+    <div id="header"></div>
+        <script>
+            fetch('encabezado.html').then(response => response.text())
+            .then(data => {document.getElementById('header').innerHTML = data;
+            });
+        </script>
+
+    <main class="contenido">
+        <div class="banner">
+            <h1>Instalaciones Deportivas del Club</h1>
+        </div>
+
+        <section class="instalacion">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>🏀 Cancha de Básquet</h2></td>
+                </tr>
+                <tr>
+                    <td><img src="./Imagenes/cancha basket2.jpg" align="left" alt="Cancha de Basquet"></td>
+                    <td><p>Espacio techado y con iluminación LED para entrenamientos y partidos locales. Piso deportivo homologado.</p></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="instalacion">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>⚽ Cancha de Fútbol 11</h2></td>
+                </tr>
+                <tr>
+                    <td><img src="./Imagenes/cancha futbol.jpg" align="left" alt="Cancha de Basquet"></td>
+                    <td><p>Campo de césped sintético con tribunas, vestuarios y sector de árbitros. Ideal para torneos federados y también amateur.</p></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="instalacion">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>🎾 Canchas de Pádel</h2></td>
+                </tr>
+                <tr>
+                    <td><img src="./Imagenes/padel fem.jpg" align="left" alt="Cancha de Basquet"></td>
+                    <td><p>Tres canchas vidriadas de cemento techadas, iluminación nocturna y espacio de descanso con bufet.</p></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="instalacion">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>🏊 Pileta de Natación</h2></td>
+                </tr>
+                <tr>
+                    <td><img src="./Imagenes/pileta.jpg" align="left" alt="Cancha de Basquet"></td>
+                    <td><p>Pileta semiolímpica climatizada, disponible para socios con clases y actividades recreativas.</p></td>
+                </tr>
+            </table>
+            
+            
+        </section>
+
+        <section class="instalacion">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>🎯 Cancha de Bochas</h2></td>
+                </tr>
+                <tr>
+                    <td><img src="./Imagenes/Cancha-de-bochas.jpg" align="left" alt="Cancha de Basquet"></td>
+                    <td><p>Espacio tradicional para encuentros recreativos, con piso reglamentario.</p></td>
+                </tr>
+            </table>
+        </section>
+
+        <div class="banner">
+            <h1>Instalaciones Socio-culturales del Club</h1>
+        </div>
+        
+        <section class="instalacion">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>🎉 Salón de Eventos</h2></td>
+                </tr>
+                <tr>
+                    <td><img src="./Imagenes/salon de fiestas.jpg" align="left" alt="Cancha de Basquet"></td>
+                    <td><p>Espacio cubierto para fiestas, reuniones sociales, aniversarios y actos institucionales. Equipado con sonido, iluminación y mobiliario versátil para distintos eventos.</p></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="instalacion">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>🔥 Quincho con Parrilla</h2></td>
+                </tr>
+                <tr>
+                    <td><img src="./Imagenes/quincho.jpg" align="left" alt="Cancha de Basquet"></td>
+                    <td><p>Área cubierta ideal para encuentros familiares o jornadas recreativas. Parrilla, mesas comunitarias y un sector arbolado para disfrutar al aire libre.</p></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="instalacion">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>🥊 Ring de Boxeo</h2></td>
+                </tr>
+                <tr>
+                    <td><img src="./Imagenes/ring box.jpg" align="left" alt="Cancha de Basquet"></td>
+                    <td><p>Espacio acondicionado para entrenamientos y exhibiciones. Ring profesional, tribuna móvil y vestuarios. Escenario habitual de eventos deportivos y federados.</p></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

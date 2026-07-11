@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Deportes | Club Atlético Plaza Huincul</title>
+    <link rel="stylesheet" href="./css/estilosHeader.css">
+    <link rel="stylesheet" href="./css/estiloFooter.css">
+    <link rel="stylesheet" href="./css/estilosEncuestas.css"> 
+    <script src="./js/funcionalidad.js"></script>
+</head>
+
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => {document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    
+    <header class="banner">
+        <h1>Encuestas</h1>
+    </header>
+
+    <main>
+        <section id="encuestas-socios" class="container">
+            <div class="encuesta-box">
+                <div class="encuesta-header">
+                    <i class="fas fa-poll-h icon-encuesta"></i>
+                    <h2>Voz del Socio</h2>
+                    <p>Tu opinión nos ayuda a que el Club siga creciendo. Completá el formulario oficial debajo.</p>
+                </div>
+
+                <div class="google-form-container">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSeQzx9U8DvZc-PRylXOCHUCWx9515zCmp3_rBXq1-30Yi7vUA/viewform?usp=publish-editor" 
+                        width="100%" 
+                        height="800" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                        Cargando formulario...
+                    </iframe>
+                </div>
+
+                <div class="encuesta-footer">
+                    <p>¿Tenés problemas para ver el formulario? <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQzx9U8DvZc-PRylXOCHUCWx9515zCmp3_rBXq1-30Yi7vUA/viewform?usp=publish-editor" target="_blank">Abrir en pestaña nueva</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

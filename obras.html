@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Obras e Infraestructura | CAPH</title>
+    <link rel="stylesheet" href="./css/estilosHeader.css">
+    <link rel="stylesheet" href="./css/estiloFooter.css">
+    <link rel="stylesheet" href="./css/estilosObras.css"> 
+    <script src="./js/funcionalidad.js"></script>
+</head>
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => { document.getElementById('header').innerHTML = data; });
+    </script>
+
+    <header class="banner">
+        <h1>Obras e Infraestructura</h1>
+    </header>
+
+    <main>
+        <section class="contenedor-obras">
+            <p class="intro">
+                En el Club Atlético Plaza Huincul trabajamos constantemente para mejorar nuestras instalaciones. 
+                Aquí puedes conocer los proyectos finalizados y las obras en curso que hacen grande a nuestra institución.
+            </p>
+
+            <div class="grilla-obras">
+                <article class="tarjeta-obra">
+                    <div class="imagen-obra">
+                        <img src="./Imagenes/obra-estadio.jpg" alt="Estadio El Coloso">
+                        <span class="estado finalizado">Finalizado</span>
+                    </div>
+                    <div class="info-obra">
+                        <h3>Estadio "El Coloso"</h3>
+                        <p>Remodelación integral de las tribunas y mejora del sistema de iluminación LED para competencias nocturnas.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-obra">
+                    <div class="imagen-obra">
+                        <img src="./Imagenes/obra-gimnasio.jpg" alt="Gimnasio Cubierto">
+                        <span class="estado proceso">En Proceso</span>
+                    </div>
+                    <div class="info-obra">
+                        <h3>Nuevo Piso de Parquet</h3>
+                        <p>Instalación de piso flotante profesional en el gimnasio principal para la práctica de Básquet y Voleibol.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-obra">
+                    <div class="imagen-obra">
+                        <img src="./Imagenes/obra-social.jpg" alt="Sede Social">
+                        <span class="estado finalizado">Finalizado</span>
+                    </div>
+                    <div class="info-obra">
+                        <h3>Sede Social Atahualpa Yupanqui</h3>
+                        <p>Modernización del salón de usos múltiples y nuevas oficinas administrativas para atención al socio.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividades | Club Atlético Plaza Huincul</title>
+    <link rel="stylesheet" href="./css/estilosHeader.css">
+    <link rel="stylesheet" href="./css/estiloFooter.css">
+    <link rel="stylesheet" href="./css/estilosActivCult.css"> 
+    <script src="./js/funcionalidad.js"></script>
+</head>
+
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => {document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    
+    <header class="banner">
+        <h1>Actividades Culturales</h1>
+    </header>
+
+    <main>
+        <section id="actividades-culturales" class="container">
+            <div class="cultural-header">
+                <h2 class="section-title">Talleres y Cultura</h2>
+                <p>Espacios de formación artística y recreativa para todas las edades.</p>
+            </div>
+
+            <div class="cultural-grid">
+                <div class="cultural-card">
+                    <div class="cultural-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="cultural-content">
+                        <span class="cultural-tag">Danza</span>
+                        <h3>Folklore Tradicional</h3>
+                        <p>Nuestras raíces en movimiento. Clases para niños, jóvenes y adultos.</p>
+                        <div class="cultural-info-box">
+                            <span><i class="far fa-clock"></i> Mar. y Jue. 18:00hs</span>
+                            <span><i class="fas fa-user-friends"></i> Prof. Juan Pérez</span>
+                        </div>
+                        <a href="#" class="btn-inscripcion">Consultar Cupos</a>
+                    </div>
+                </div>
+
+                <div class="cultural-card">
+                    <div class="cultural-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="cultural-content">
+                        <span class="cultural-tag">Bienestar</span>
+                        <h3>Yoga e Introspección</h3>
+                        <p>Encuentra tu equilibrio en un ambiente tranquilo dentro de nuestras instalaciones.</p>
+                        <div class="cultural-info-box">
+                            <span><i class="far fa-clock"></i> Lun. y Mié. 09:00hs</span>
+                            <span><i class="fas fa-user-friends"></i> Prof. Ana García</span>
+                        </div>
+                        <a href="#" class="btn-inscripcion">Consultar Cupos</a>
+                    </div>
+                </div>
+
+                <div class="cultural-card">
+                    <div class="cultural-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="cultural-content">
+                        <span class="cultural-tag">Arte</span>
+                        <h3>Taller de Pintura y Dibujo</h3>
+                        <p>Explora tu creatividad. No se requieren conocimientos previos para participar.</p>
+                        <div class="cultural-info-box">
+                            <span><i class="far fa-clock"></i> Viernes 17:30hs</span>
+                            <span><i class="fas fa-user-friends"></i> Prof. Luis Sosa</span>
+                        </div>
+                        <a href="#" class="btn-inscripcion">Consultar Cupos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

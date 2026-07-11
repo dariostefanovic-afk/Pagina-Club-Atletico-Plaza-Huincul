@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Deportes | Club Atlético Plaza Huincul</title>
+    <link rel="stylesheet" href="./css/estilosHeader.css">
+    <link rel="stylesheet" href="./css/estiloFooter.css">
+    <link rel="stylesheet" href="./css/estilosVitalicios.css"> 
+    <script src="./js/funcionalidad.js"></script>
+</head>
+
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => {document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    
+    <header class="banner">
+        <h1>Vitalicios</h1>
+    </header>
+
+    <main>
+        <section id="socios-vitalicios" class="container">
+            <div class="vitalicios-banner">
+                <div class="vitalicios-content">
+                    <i class="fas fa-medal gold-icon"></i>
+                    <h2>Socios Vitalicios</h2>
+                    <p class="subtitle">Honor y pertenencia al Club Atlético Plaza Huincul</p>
+                    
+                    <div class="vitalicios-info-grid">
+                        <div class="vitalicio-card">
+                            <h3>¿Quiénes pueden serlo?</h3>
+                            <p>Aquellos socios activos que hayan mantenido su cuota al día de manera ininterrumpida durante <strong>30 años</strong>.</p>
+                        </div>
+
+                        <div class="vitalicio-card">
+                            <h3>Beneficios de Honor</h3>
+                            <ul>
+                                <li>Exención del pago de la cuota social mensual.</li>
+                                <li>Acceso vitalicio a todos los sectores del club.</li>
+                                <li>Lugar preferencial en eventos institucionales.</li>
+                                <li>Reconocimiento en la "Galería de la Fama" del club.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="vitalicio-footer">
+                        <p>Para trámites de cambio de categoría, acercarse a la Secretaría del Club con el carnet de socio actual.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

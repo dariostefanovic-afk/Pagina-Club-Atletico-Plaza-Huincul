@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Títulos y Logros | CAPH</title>
+    <link rel="stylesheet" href="./css/estilosHeader.css">
+    <link rel="stylesheet" href="./css/estiloFooter.css">
+    <link rel="stylesheet" href="./css/estilosLogros.css"> 
+    <script src="./js/funcionalidad.js"></script>
+</head>
+<body onload="anioActual()">
+    <div id="header"></div>
+    <script>
+        fetch('encabezado.html').then(response => response.text())
+        .then(data => { document.getElementById('header').innerHTML = data; });
+    </script>
+
+    <header class="banner">
+        <h1>Títulos y Logros</h1>
+    </header>
+
+    <main>
+        <section class="seccion-logros">
+            <p class="intro-logros">
+                Más de un siglo de gloria deportiva. Repasamos las conquistas más importantes que forjaron la identidad del Club Atlético Plaza Huincul.
+            </p>
+
+            <div class="categoria-logros">
+                <h2 class="titulo-categoria">Básquetbol</h2>
+                <div class="contenedor-tarjetas">
+                    <article class="tarjeta-logro">
+                        <div class="icono-copa">🏆</div>
+                        <div class="info-logro">
+                            <span class="anio">1990</span>
+                            <h3>Campeón Provincial</h3>
+                            <p>Torneo Integración de Básquetbol. Un hito en la historia del deporte de la ciudad.</p>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-logro">
+                        <div class="icono-copa">🥇</div>
+                        <div class="info-logro">
+                            <span class="anio">2015</span>
+                            <h3>Torneo Apertura</h3>
+                            <p>Campeón invicto en la categoría primera división masculina.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="categoria-logros">
+                <h2 class="titulo-categoria">Fútbol</h2>
+                <div class="contenedor-tarjetas">
+                    <article class="tarjeta-logro">
+                        <div class="icono-copa">🏆</div>
+                        <div class="info-logro">
+                            <span class="anio">Histórico</span>
+                            <h3>Títulos LIFUNE</h3>
+                            <p>Múltiples conquistas en la Liga de Fútbol del Neuquén a lo largo de las décadas.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="tarjeta-logro">
+                        <div class="icono-copa">⭐</div>
+                        <div class="info-logro">
+                            <span class="anio">Social</span>
+                            <h3>Reconocimiento al Mérito</h3>
+                            <p>Premio a la institución más destacada por su labor comunitaria y formativa.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="seccion-idolos">
+            <h2 class="titulo-categoria">Figuras Destacadas</h2>
+            
+            <div class="contenedor-idolos">
+                <article class="tarjeta-idolo">
+                    <div class="foto-idolo">
+                        <img src="./Imagenes/idolo1.jpg" alt="Nombre del Ídolo">
+                    </div>
+                    <div class="info-idolo">
+                        <h3>Nombre Apellido</h3>
+                        <span class="rol">Capitán Histórico - Década del 90</span>
+                        <p>Líder indiscutido dentro y fuera de la cancha. Fue pieza fundamental en la obtención del provincial de 1990.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-idolo">
+                    <div class="foto-idolo">
+                        <img src="./Imagenes/idolo2.jpg" alt="Nombre del Ídolo">
+                    </div>
+                    <div class="info-idolo">
+                        <h3>Otro Nombre</h3>
+                        <span class="rol">Goleador Histórico</span>
+                        <p>Máximo anotador de la institución con más de 100 goles oficiales defendiendo la camiseta azul y blanca.</p>
+                    </div>
+                </article>
+                
+                <article class="tarjeta-idolo">
+                    <div class="foto-idolo">
+                        <img src="./Imagenes/idolo3.jpg" alt="Nombre del Ídolo">
+                    </div>
+                    <div class="info-idolo">
+                        <h3>Figura Social</h3>
+                        <span class="rol">Dirigente Emblemático</span>
+                        <p>Dedicó más de 40 años al crecimiento del club, impulsando la infraestructura que hoy disfrutamos.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="#" class="escudo">
+                <img src="./Imagenes/escudoCAPH.jpg" alt="Escudo CAPH"/>
+            </a>
+            <p>&copy; Club Atlético Plaza Huincul 1920-<span id="anioActual"></span><br/>
+                Sitio Web Oficial. <br/>
+                Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
