@@ -1,0 +1,98 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:lightblue;
+  /* --- STICKY FOOTER --- */
+    display: flex;              /* 1. Activar Flexbox */
+    flex-direction: column;     /* 2. Alinear los hijos (header, main, footer) verticalmente */
+    min-height: 100vh;          /* 3. Asegurar que el body ocupe al menos la altura de la pantalla */
+}
+
+/* --- NUEVO ESTILO PARA FORZAR AL MAIN A OCUPAR ESPACIO --- */
+main {
+    flex-grow: 1; /* Hace que el main tome todo el espacio vertical disponible */
+}
+
+.banner {
+  background: #004488;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.estatuto {
+    /* Centrar el contenido de la sección */
+    text-align: center; 
+    padding: 40px 20px;
+}
+
+.estatuto h2 {
+    /* Alineación de H2 al centro para modernizar */
+    text-align: center; 
+    /* Estilo limpio para el H2 */
+    background-color: transparent; 
+    color: #004488; /* Color primario del club */
+    padding-bottom: 20px;
+    border-radius: 0;
+    font-style: italic;
+}
+
+
+/* --- ESTILO PARA EL BOTÓN DE DESCARGA (el <a>) --- */
+.estatuto a {
+  /* Propiedades de visualización */
+  display: inline-block; 
+  text-decoration: none; /* Quita el subrayado del enlace */
+  font-weight: bold;
+  
+  /* Estilo de Botón Moderno */
+  background-color: #004488; /* Azul primario del club (CTA) */
+  color: white; /* Texto blanco para alto contraste */
+  padding: 15px 40px; /* Relleno generoso */
+  font-size: 1.2em;
+  
+  /* Diseño */
+  border-radius: 8px; /* Bordes ligeramente redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: all 0.3s ease; /* Transiciones suaves para efectos */
+  
+  /* Posicionamiento */
+  margin: 20px auto;
+  max-width: 450px; 
+  width: 100%; /* Asegura que tome el ancho máximo disponible */
+
+  /* Icono de PDF (opcional, usando un pseudo-elemento) */
+  position: relative;
+}
+
+/* Efecto Hover (Interacción) */
+.estatuto a:hover {
+    background-color: #0066cc; /* Color más claro al pasar el mouse */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: translateY(-2px); /* Efecto de levantamiento sutil */
+}
+
+/* estilosEstatuto.css - NUEVO: Estilo de la imagen dentro del botón */
+
+.estatuto a img {
+    /* 1. Definir un tamaño de icono apropiado */
+    width: 50px; 
+    height: 50px;
+    
+    /* 2. Alinear la imagen verticalmente con el texto */
+    vertical-align: middle; 
+    
+    /* 3. Crear espacio entre el icono y el texto "Descargar Estatuto..." */
+    margin-right: 20px; 
+}
+
+/* Agregamos un icono visual de PDF 
+.estatuto a::before {
+    content: "⬇️ "; 
+    font-weight: normal;
+    margin-right: 10px;
+}*/
+
+

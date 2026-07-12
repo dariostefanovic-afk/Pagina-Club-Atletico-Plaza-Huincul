@@ -1,0 +1,83 @@
+
+#ingreso-socios {
+    background-color: rgba(0, 68, 136, 0.793);
+    padding: 60px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.form-ingreso {
+    padding: 30px;
+    background-color: rgba(127, 255, 229, 0.641);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-self: normal;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"],
+select {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    margin-bottom: 12px;
+}
+
+select {
+  height: 36px;
+}
+
+input[type="button"] {
+    box-sizing: initial;
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #45a049;
+}
+
+#botones {
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.contenido {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    padding: 75px;
+    background-image: url('../Imagenes/Frente\ club6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+

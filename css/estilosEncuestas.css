@@ -1,0 +1,155 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  background-color:lightblue;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.banner {
+    background: #004488; /* Azul principal del club */
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.container {
+    padding: 30px 40px;
+    padding-bottom: 70px;
+}
+
+/* Contenedor Principal de Encuestas */
+.encuesta-box {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e1e1e1;
+}
+
+.encuesta-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icon-encuesta {
+    font-size: 2.5rem;
+    color: #004a99; /* Azul del club */
+    margin-bottom: 10px;
+}
+
+.encuesta-activa h3 {
+    color: #333;
+    border-bottom: 2px solid #f39c12; /* Naranja/Amarillo de acento */
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.pregunta {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Estilo de los Radio Buttons */
+.opcion-encuesta {
+    display: block;
+    position: relative;
+    padding: 15px 15px 15px 45px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.opcion-encuesta:hover {
+    background: #edf2f7;
+}
+
+.opcion-encuesta input {
+    position: absolute;
+    opacity: 0;
+}
+
+.custom-radio {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #004a99;
+    border-radius: 50%;
+}
+
+.opcion-encuesta input:checked ~ .custom-radio {
+    background-color: #004a99;
+}
+
+/* Botón Enviar */
+.btn-enviar-encuesta {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 25px auto 0;
+    padding: 12px;
+    background-color: #004a99;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enviar-encuesta:hover {
+    background-color: #003366;
+}
+
+.ver-resultados {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+/* Contenedor del Iframe */
+.google-form-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 5px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Ajuste de altura dinámica para móviles */
+.google-form-container iframe {
+    border: none;
+    min-height: 600px; /* Altura mínima aceptable */
+}
+
+/* Estilo del pie de la encuesta */
+.encuesta-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.encuesta-footer a {
+    color: #004a99;
+    text-decoration: underline;
+    font-weight: bold;
+}

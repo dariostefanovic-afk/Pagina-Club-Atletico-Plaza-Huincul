@@ -1,0 +1,74 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Alineado del logo a la izquierda y el menú a la derecha, fondo y espaciado en el encabezado */
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #001944;
+    padding: 10px 30px;
+}
+/* Tamaño del logo */
+.logo img {
+    height: 130px;
+}
+/* Se eliminan los puntos de la lista y se alinean horizontalmente los ítems del menú con espacio entre ellos */
+.navegacion .menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+/* Posicion de los submenús de forma absoluta respecto a cada ítem padre */
+.menu > li {
+    position: relative;
+}
+/* Da formato a las opciones (vinculos) del menú y suaviza el cambio de color al pasar el mouse sobre las opciones */
+.menu a {
+    color: white;
+    font-size: 23px;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.5s;
+}
+/* Cambia el fondo al pasar el mouse y redondea los bordes */
+.menu a:hover {
+    background: #007a88;
+    border-radius: 5px;
+}
+/* Oculta los submenús hasta que se activen. Con z-index el submenú se muestra por encima de cualquier otro contenido */
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #004488;
+    border-radius: 5px;
+    list-style: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+/* Al pasar el mouse sobre un <li>, se muestra su submenú */
+.menu li:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+/* Posicionamiento de los submenús */
+.submenu li {
+    position: relative;
+}
+
+.submenu .submenu {
+    left: 100%;
+    top: 0;
+}
+

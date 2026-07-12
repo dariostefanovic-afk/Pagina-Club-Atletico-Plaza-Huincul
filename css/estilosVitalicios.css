@@ -1,0 +1,103 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  background-color:lightblue;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.banner {
+    background: #004488; /* Azul principal del club */
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.container {
+    padding: 30px;
+    padding-bottom: 70px;
+}
+
+/* Contenedor Especial Vitalicios */
+.vitalicios-banner {
+    background: linear-gradient(135deg, #ffffffa9 0%, #f9f9f9 100%);
+    border: 2px solid #d4af37; /* Color Dorado */
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 40px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.039);
+}
+
+.vitalicios-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.gold-icon {
+    font-size: 3rem;
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.vitalicios-content h2 {
+    color: #1a1a1a;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #777777;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* Grid de información interna */
+.vitalicios-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: left;
+    margin-top: 20px;
+    
+}
+
+.vitalicio-card {
+    background: white;
+    padding: 45px;
+    border-radius: 10px;
+    border-top: 4px solid #d4af37;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.vitalicio-card h3 {
+    color: #004a99; /* Volvemos al azul del club para el título */
+    margin-bottom: 15px;
+}
+
+.vitalicio-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vitalicio-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eeeeee43;
+}
+
+.vitalicio-card li:last-child {
+    border-bottom: none;
+}
+
+/* Nota al pie */
+.vitalicio-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #d4af37;
+    font-size: 1rem;
+    color: #555555ef;
+}

@@ -1,0 +1,40 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:lightblue;
+}
+
+.banner {
+  background: #004488;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.contenido {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.instalacion {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #004488;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.instalacion h2 {
+  margin-top: 0;
+}
+
+.instalacion p {
+  text-align: justify;
+}
+
+.instalacion img {
+    padding: 20px;
+    height: 200px;
+}

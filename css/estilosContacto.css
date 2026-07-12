@@ -1,0 +1,39 @@
+.contacto {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.info h2 {
+  margin-top: 20px;
+  color: #004488;
+}
+
+.info {
+    background-color: lightgray;
+}
+
+.formulario {
+  margin-top: 40px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+form button {
+  margin-top: 20px;
+  background: #004488;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}

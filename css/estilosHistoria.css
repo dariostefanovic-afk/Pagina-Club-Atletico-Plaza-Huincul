@@ -1,0 +1,205 @@
+/* =======================================
+   ESTILOS BASE (Aseguran el footer pegado al pie)
+   ======================================= */
+/* Si no tienes un CSS base, añade esto */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.banner {
+    background: #004488; /* Azul principal del club */
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+/* =======================================
+   ESTILOS DE LA SECCIÓN DE HISTORIA
+   ======================================= */
+.historia-club {
+    padding: 50px 10%;
+    background-color: #e0f1f4; /* Fondo suave para destacar los eventos */
+}
+
+.historia-club .introduccion {
+    text-align: center;
+    font-size: 1.3em;
+    color: #333;
+    max-width: 920px;
+    margin: 0 auto 50px;
+    font-style: italic;
+    border-bottom: 3px solid #004488;
+    padding-bottom: 20px;
+    font-weight: 500;
+    /*agrega banner*/
+    background-color: rgba(81, 150, 218, 0.581);
+    padding: 40px;
+    border-radius: 5px;
+}
+
+/* --- ESTRUCTURA DE LA LÍNEA DE TIEMPO (TIMELINE) --- */
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 1. La línea vertical central */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #004488; 
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px; /* Centrado fino */
+}
+
+.evento {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/* 2. El círculo que marca el evento en la línea */
+.evento::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: white;
+    border: 3px solid #004488;
+    top: 30px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* 3. Contenido del evento (la caja de texto) */
+.evento .contenido {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.evento .contenido h3 {
+    color: #004488;
+    margin-top: 0;
+}
+
+.evento img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 15px;
+    display: block;
+}
+
+/* --- LADO IZQUIERDO --- */
+.evento {
+    left: 0;
+}
+
+/* Flecha del contenido (apunta al centro) */
+.evento .contenido::after {
+    content: " ";
+    position: absolute;
+    top: 25px;
+    right: -10px;
+    border-width: 10px 0 10px 10px; /* Triángulo apuntando a la derecha */
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+}
+
+
+/* --- LADO DERECHO (Alternancia) --- */
+.evento.right {
+    left: 50%; /* Mueve el evento al lado derecho de la línea */
+}
+
+/* Mueve el círculo del lado derecho a la izquierda de la caja */
+.evento.right::after {
+    left: -10px;
+}
+
+/* Flecha del contenido del lado derecho (apunta a la izquierda) */
+.evento.right .contenido::after {
+    left: -10px;
+    right: auto;
+    border-width: 10px 10px 10px 0; /* Triángulo apuntando a la izquierda */
+    border-color: transparent white transparent transparent;
+}
+
+/* --- ESTILO DE LA FECHA (fuera de la caja) --- */
+.fecha {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    top: 30px;
+    width: 40%;
+    text-align: right;
+}
+
+.evento.right .fecha {
+    left: 60%;
+    text-align: left;
+}
+
+/* =======================================
+   RESPONSIVE (Para Móviles)
+   ======================================= */
+@media screen and (max-width: 768px) {
+    .historia-club {
+        padding: 30px 20px;
+    }
+
+    /* La línea de tiempo va toda a la izquierda */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Todos los eventos ocupan todo el ancho y se alinean a la izquierda */
+    .evento, .evento.right {
+        width: 100%;
+        left: 0;
+        padding-left: 70px; /* Deja espacio para la línea y el punto */
+        padding-right: 10px;
+    }
+
+    /* El punto se mueve a la izquierda para todos los eventos */
+    .evento::after, .evento.right::after {
+        left: 20px;
+    }
+    
+    /* La flecha apunta a la izquierda para todos los eventos */
+    .evento .contenido::after, .evento.right .contenido::after {
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+        left: 60px;
+        right: auto;
+    }
+
+    /* La fecha se mueve dentro de la caja de contenido para no interferir */
+    .fecha, .evento.right .fecha {
+        position: static;
+        text-align: left;
+        font-size: 1.1em;
+        padding-bottom: 5px;
+        color: #004488;
+        font-weight: bold;
+        width: auto;
+    }
+}

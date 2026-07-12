@@ -1,0 +1,115 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:lightblue;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.banner {
+    background: #004488; /* Azul principal del club */
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.container {
+    padding: 30px 20px;
+    padding-bottom: 60px;
+}
+
+/* Encabezado de la sección */
+.sociales-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-intro {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Grid de Sociales */
+.sociales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjeta Social */
+.social-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+    overflow: hidden;
+    position: relative;
+    border-bottom: 5px solid #f39c12; /* Color de acento naranja/amarillo */
+}
+
+/* Etiqueta superior */
+.social-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 74, 153, 0.9); /* Azul del club con transparencia */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.social-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.social-info {
+    padding: 25px;
+}
+
+.social-info h3 {
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.social-info p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estado y Botones */
+.tag-status {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #004a99;
+    background: #eef4fb;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.btn-info-social {
+    display: inline-block;
+    color: #004a99;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #004a99;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-info-social:hover {
+    background: #004a99;
+    color: white;
+}
